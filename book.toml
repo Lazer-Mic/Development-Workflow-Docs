@@ -16,4 +16,3 @@ edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit
 [output.html.search]
 use-boolean-and = true
 prebuild-index = true
-site-url = "/Development-Workflow-Docs/"
