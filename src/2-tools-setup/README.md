@@ -76,7 +76,7 @@ cargo install --version "^0.4" mdbook
 
 After setup, your development environment should look like this:
 
-```
+```text
 Projects/
 ├── SL-Configurator-Docs/          # Main documentation
 │   ├── de/                        # German documentation

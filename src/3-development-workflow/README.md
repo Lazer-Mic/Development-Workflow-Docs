@@ -63,12 +63,12 @@ This guide covers the markdown formatting standards for the documentation projec
 ```
 
 ### Code Blocks
-```markdown
+````markdown
 ```bash
 # Command example
 git add .
 ```
-```
+````
 
 ## Content Guidelines
 
@@ -93,7 +93,7 @@ This guide covers best practices for managing images in the documentation.
 
 ## File Organization
 
-```
+```text
 src/
 ├── section-name/
 │   ├── README.md
@@ -151,7 +151,7 @@ This guide covers the file organization structure for the documentation project.
 
 ## Directory Structure
 
-```
+```text
 src/
 ├── SUMMARY.md                    # Table of contents
 ├── 1-introduction/              # Project overview
