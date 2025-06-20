@@ -4,16 +4,16 @@
 
 # Tools & Setup
 
-[Development Environment](2-tools-setup/README.md)
+[Development Environment](2-tools-setup/)
 
 # Development Workflow
 
-[Content Creation Process](3-development-workflow/README.md)
+[Content Creation Process](3-development-workflow/)
 
 # Deployment
 
-[Deployment Process](4-deployment/README.md)
+[Deployment Process](4-deployment/)
 
 # Best Practices
 
-[Quality Guidelines](5-best-practices/README.md)
+[Quality Guidelines](5-best-practices/)
