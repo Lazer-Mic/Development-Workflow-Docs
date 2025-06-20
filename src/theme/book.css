@@ -1,0 +1,37 @@
+/* Custom Font Configuration */
+
+/* Import your custom font */
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('../fonts/your-font-file.woff2') format('woff2'),
+         url('../fonts/your-font-file.woff') format('woff'),
+         url('../fonts/your-font-file.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply custom font to the entire book */
+body {
+    font-family: 'YourCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Apply to headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'YourCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Apply to code blocks */
+pre, code {
+    font-family: 'YourCustomFont', 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* Apply to navigation */
+.sidebar {
+    font-family: 'YourCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Apply to table of contents */
+.chapter-title {
+    font-family: 'YourCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+} 
