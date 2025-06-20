@@ -12,11 +12,6 @@ build-dir = "book"
 git-repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
-default-theme = "light"
-preferred-dark-theme = "navy"
-copy-fonts = true
-mathjax-support = false
-additional-css = ["src/pragmatapro.css"]
 
 [output.html.search]
 enable = true
