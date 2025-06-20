@@ -1,0 +1,19 @@
+[book]
+authors = ["Michael Orlando"]
+language = "en"
+src = "src"
+title = "Development Workflow Documentation"
+description = "Comprehensive documentation of development tools, workflows, and best practices for the SL-Configurator documentation project"
+
+[build]
+build-dir = "book"
+
+[output.html]
+git-repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
+
+[output.html.search]
+use-boolean-and = true
+prebuild-index = true
+site-url = "/Development-Workflow-Docs/"
