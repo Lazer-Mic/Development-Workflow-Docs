@@ -41,6 +41,10 @@ jobs:
       - name: Build with mdBook
         run: mdbook build
 
+      - name: Add PragmataPro CSS
+        run: |
+          find book -name "*.html" -exec sed -i 's|<link rel="stylesheet" href="css\/print.css" media="print">|<link rel="stylesheet" href="css\/print.css" media="print">\n        <link rel="stylesheet" href="theme\/book.css">|' {} \;
+
       - name: Fix base href for GitHub Pages
         run: |
           find book -name "*.html" -exec sed -i 's|<head>|<head>\n<base href="/Development-Workflow-Docs/">|' {} \;
