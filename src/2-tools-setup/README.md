@@ -141,7 +141,7 @@ git clone git@github.com:Lazer-Mic/Development-Workflow-Docs.git
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install mdBook
-cargo install --version "^0.4" mdBook
+cargo install --version "^0.4" mdbook
 ```
 
 ### Basic Commands
