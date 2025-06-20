@@ -1,77 +1,67 @@
 /* PragmataPro Font Configuration */
+/* 
+   NOTE: PragmataPro font files are NOT included in this repository due to copyright restrictions.
+   To use PragmataPro locally, place your font files in src/fonts/ and uncomment the @font-face rules below.
+*/
 
-/* Import PragmataPro Variable Fonts */
-@font-face {
-    font-family: 'PragmataPro';
-    src: url('../fonts/PragmataProVF_liga_09.ttf') format('truetype-variations');
-    font-weight: 400 900;
-    font-style: normal;
-    font-display: swap;
-}
+/* 
+   Uncomment these lines and add your PragmataPro font files to src/fonts/ for local development:
+   
+   @font-face {
+       font-family: 'PragmataPro';
+       src: url('../fonts/PragmataProVF_liga_09.ttf') format('truetype-variations');
+       font-weight: 400 900;
+       font-style: normal;
+       font-display: swap;
+   }
 
-@font-face {
-    font-family: 'PragmataPro';
-    src: url('../fonts/PragmataProVF_Italic_liga_09.ttf') format('truetype-variations');
-    font-weight: 400 900;
-    font-style: italic;
-    font-display: swap;
-}
+   @font-face {
+       font-family: 'PragmataPro';
+       src: url('../fonts/PragmataProVF_Italic_liga_09.ttf') format('truetype-variations');
+       font-weight: 400 900;
+       font-style: italic;
+       font-display: swap;
+   }
+*/
 
-/* Fallback for browsers that don't support variable fonts */
-@font-face {
-    font-family: 'PragmataPro';
-    src: url('../fonts/PragmataProVF_09.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'PragmataPro';
-    src: url('../fonts/PragmataProVF_Italic_09.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Apply PragmataPro to the entire book */
+/* Apply PragmataPro to the entire book (with fallbacks) */
 body {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 /* Apply to headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 600;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 /* Apply to code blocks */
 pre, code {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 /* Apply to navigation */
 .sidebar {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 /* Apply to table of contents */
 .chapter-title {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 500;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 /* Apply to inline code */
 code:not(pre code) {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
     background-color: #f6f8fa;
@@ -81,14 +71,14 @@ code:not(pre code) {
 
 /* Apply to navigation links */
 .sidebar a {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 /* Apply to search results */
 .search-results {
-    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'PragmataPro', 'Fira Code', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
 } 
