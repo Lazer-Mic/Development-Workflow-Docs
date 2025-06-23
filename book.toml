@@ -9,6 +9,7 @@ description = "Comprehensive documentation of development tools, workflows, and 
 build-dir = "book"
 
 [output.html]
+site-url = "/Development-Workflow-Docs/"
 git-repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
