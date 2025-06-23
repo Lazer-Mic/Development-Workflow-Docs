@@ -35,3 +35,11 @@
 - [mdBook](tools/mdbook/README.md)
 - [Terminal](tools/terminal/README.md)
 - [VS Code](tools/vscode/README.md)
+
+# Workflows
+
+- [Deployment](workflows/deployment/README.md)
+- [Documentation](workflows/documentation/README.md)
+- [Learning Journey](workflows/learning-journey/README.md)
+- [Project Management](workflows/project-management/README.md)
+- [Troubleshooting](workflows/troubleshooting/README.md)
