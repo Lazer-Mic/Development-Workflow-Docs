@@ -25,3 +25,13 @@
 - [GitHub Pages](systems/github-pages/README.md)
 - [macOS Development](systems/macos/README.md)
 - [Shell & Zsh](systems/shell-zsh/README.md)
+
+# Tools
+
+- [Claude AI](tools/claude-ai/README.md)
+- [Cursor IDE](tools/cursor/README.md)
+- [Homebrew](tools/homebrew/README.md)
+- [iTerm2](tools/iterm2/README.md)
+- [mdBook](tools/mdbook/README.md)
+- [Terminal](tools/terminal/README.md)
+- [VS Code](tools/vscode/README.md)
