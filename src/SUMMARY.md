@@ -10,3 +10,9 @@
 - [Python](languages/python/README.md)
 - [Rust](languages/rust/README.md)
 - [YAML & TOML](languages/yaml-toml/README.md)
+
+# Projects
+
+- [Automation & Scripts](projects/automation/README.md)
+- [SL-Configurator Documentation](projects/sl-configurator/README.md)
+- [Project Templates](projects/templates/README.md)
