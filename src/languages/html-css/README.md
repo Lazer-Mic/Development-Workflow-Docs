@@ -1,94 +1,106 @@
 # HTML & CSS Development
 
 ## Overview
-HTML and CSS form the foundation of our web-based documentation systems, providing structure and styling for mdBook-generated sites and custom web interfaces.
+HTML and CSS form the foundation of our documentation systems, providing structure and styling for mdBook-generated sites. Our approach focuses on leveraging mdBook's built-in theming system while maintaining typography consistency across development tools.
 
 ## Our Implementation
-- **mdBook Theming**: Custom CSS for documentation sites
-- **Responsive Design**: Mobile-friendly documentation layouts
-- **Typography**: PragmataPro font integration
-- **Color Schemes**: Customized themes for readability
-- **Component Styling**: Consistent visual elements
+- **mdBook Built-in Theming**: 5 theme variants (Light, Navy, Coal, Rust, Ayu)
+- **CSS Custom Properties**: Systematic design tokens
+- **Typography Strategy**: Open Sans + Source Code Pro + PragmataPro integration
+- **Responsive Design**: Mobile-first documentation layouts
+- **Performance Optimization**: WOFF2 fonts and optimized CSS
 
-## HTML Integration
-### mdBook HTML Structure
-- **Generated HTML**: mdBook creates semantic HTML structure
-- **Custom Templates**: Handlebars templates for customization
-- **Accessibility**: ARIA labels and semantic markup
-- **SEO Optimization**: Meta tags and structured data
+## mdBook Theme System
+### Built-in Theme Architecture
+```
+book/css/
+├── general.css     # Main content styling
+├── chrome.css      # UI chrome and navigation
+├── variables.css   # CSS custom properties and themes
+└── print.css       # Print-specific styles
+```
 
-### Custom Components
+### CSS Variables Structure
+```css
+:root {
+    --sidebar-target-width: 300px;
+    --sidebar-width: min(var(--sidebar-target-width), 80vw);
+    --page-padding: 15px;
+    --content-max-width: 750px;
+    --menu-bar-height: 50px;
+    --mono-font: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace;
+}
+```
+
+### Theme Variants
+1. **Light** (default) - Clean, bright documentation
+2. **Navy** - Professional dark theme
+3. **Coal** - High-contrast dark theme  
+4. **Rust** - Warm, rust-colored theme
+5. **Ayu** - Modern dark theme with blue accents
+
+## Typography System
+### Font Stack Implementation
+```css
+/* Body Text */
+font-family: "Open Sans", sans-serif;
+/* Weights: 300, 400, 600, 700, 800 */
+
+/* Code/Monospace */
+font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace;
+/* Weight: 500 */
+
+/* Editor Integration (PragmataPro) */
+font-family: 'PragmataPro Mono', monospace;
+/* Used in: VS Code, Cursor, iTerm2, Terminal */
+```
+
+### Font Loading Strategy
+- **WOFF2 format** for optimal performance
+- **Preload critical fonts** for better UX
+- **Fallback stacks** for reliability
+
+## Icon Integration
+### FontAwesome 4.7.0
 ```html
-<!-- Code block examples -->
-<div class="code-block">
-    <pre><code class="language-bash">
-    mdbook serve --open
-    </code></pre>
-</div>
-
-<!-- Navigation components -->
-<nav class="documentation-nav">
-    <ul class="nav-links">
-        <li><a href="section1/">Section 1</a></li>
-        <li><a href="section2/">Section 2</a></li>
-    </ul>
-</nav>
+<!-- GitHub integration example -->
+git-repository-icon = "fa-github"
 ```
 
-## CSS Architecture
-### Styling Approach
-- **Custom Properties**: CSS variables for consistency
-- **Responsive Design**: Mobile-first approach
-- **Typography**: Font hierarchy and readability
-- **Color Management**: Systematic color schemes
-- **Component-based**: Modular CSS organization
+**Available icons:**
+- Navigation icons
+- Social media links  
+- UI elements
+- Status indicators
 
-### Key Stylesheets
-```css
-/* Typography */
-.pragmatapro {
-    font-family: 'PragmataPro Mono', monospace;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Code blocks */
-.code-block {
-    background: #f8f8f8;
-    border-radius: 4px;
-    padding: 1rem;
-    overflow-x: auto;
-}
-
-/* Navigation */
-.nav-links {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-}
+## Syntax Highlighting
+### Multiple Theme Support
+```
+book/
+├── highlight.css        # Base16 Atelier Dune Light
+├── tomorrow-night.css   # Dark theme
+└── ayu-highlight.css    # Ayu theme variant
 ```
 
-## Workflow Integration
-- **mdBook Theming**: Custom CSS for documentation appearance
-- **Responsive Testing**: Multi-device compatibility
-- **Performance**: Optimized CSS for fast loading
-- **Maintenance**: Systematic approach to style updates
-- **Version Control**: CSS tracked alongside content
+## Configuration Approach
+### book.toml HTML Output Settings
+```toml
+[output.html]
+site-url = "/Development-Workflow-Docs/"
+git-repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
+```
 
-## Design Principles
-### Visual Hierarchy
-- **Typography Scale**: Consistent heading sizes
-- **Spacing System**: Systematic margin and padding
-- **Color Contrast**: Accessibility-compliant color choices
-- **Focus States**: Clear interactive element states
-
-### Responsive Design
+## Responsive Design Strategy
+### Mobile-First Approach
 ```css
-/* Mobile-first approach */
+/* Default mobile styles */
 .container {
     padding: 1rem;
 }
 
+/* Tablet and up */
 @media (min-width: 768px) {
     .container {
         padding: 2rem;
@@ -98,28 +110,87 @@ HTML and CSS form the foundation of our web-based documentation systems, providi
 }
 ```
 
+### Key Breakpoints
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: > 1024px
+- **Wide**: > 1200px
+
+## Performance Optimization
+### Font Loading
+- **WOFF2 compression** for smaller file sizes
+- **Font-display: swap** for better loading UX
+- **Selective font weights** to reduce payload
+
+### CSS Organization
+- **Component-based structure** for maintainability
+- **CSS custom properties** for theme consistency
+- **Minimal custom CSS** leveraging mdBook defaults
+
+## Development Workflow
+### Local Development
+```bash
+# Start development server
+mdbook serve --open
+
+# Theme testing across variants
+# Use theme switcher in top-right corner
+
+# Browser DevTools inspection
+# Focus on responsive behavior
+```
+
+### Theme Customization
+1. **Identify target elements** in browser DevTools
+2. **Locate relevant CSS files** in `book/css/`
+3. **Test across all theme variants**
+4. **Verify responsive behavior**
+
+## Integration Points
+### mdBook Configuration
+- **HTML output settings** in `book.toml`
+- **Search functionality** with styling hooks
+- **Edit links** integration with GitHub
+
+### GitHub Pages Deployment
+- **Base URL configuration** for subdirectory hosting
+- **Asset path resolution** for fonts and images
+- **GitHub repository integration** via edit links
+
 ## Learning Journey
-- **Starting Point**: Basic HTML/CSS for styling needs
-- **Current Focus**: Modern CSS features and best practices
-- **Key Concepts**: Flexbox, Grid, custom properties
-- **Practical Application**: mdBook theme customization
-- **Future Goals**: CSS animations and advanced layouts
+### Current Proficiency
+- ✅ **mdBook theming system** understanding
+- ✅ **CSS custom properties** for design tokens
+- ✅ **Responsive design** principles
+- ✅ **Typography hierarchy** implementation
 
-## Tools & Technologies
+### Areas for Growth
+- 🔄 **Advanced CSS animations** for enhanced UX
+- 🔄 **CSS Grid** for complex layouts
+- 🔄 **Custom mdBook themes** development
+- 🔄 **Performance optimization** techniques
+
+## Tools & Workflow
 ### Development Tools
-- **Browser DevTools**: Debugging and testing
-- **CSS Validators**: Code quality assurance
-- **Responsive Testing**: Multi-device preview
-- **Performance Tools**: CSS optimization
+- **Browser DevTools** for styling and debugging
+- **mdBook serve** for live reload development
+- **GitHub Pages** for production deployment
+- **Git** for version control of styling changes
 
-### Modern CSS Features
-- **CSS Grid**: Advanced layout systems
-- **Flexbox**: Flexible component layouts
-- **Custom Properties**: Dynamic styling
-- **CSS Modules**: Scoped styling approach
+### Typography Tools
+- **PragmataPro licensing** for editor consistency
+- **Google Fonts** for Open Sans variants
+- **Font optimization** for web delivery
 
-## Integration with Other Technologies
-- **mdBook**: Primary platform for HTML/CSS implementation
-- **JavaScript**: Enhanced interactivity
-- **Rust**: mdBook's underlying technology
-- **Git**: Version control for stylesheets
+## Best Practices
+### CSS Architecture
+- **Leverage mdBook defaults** before customizing
+- **Use CSS custom properties** for consistency
+- **Test across all theme variants**
+- **Maintain responsive design principles**
+
+### Performance
+- **Optimize font loading** with appropriate strategies
+- **Minimize custom CSS** to reduce maintenance
+- **Use efficient selectors** for better performance
+- **Test on various devices** and connection speeds
