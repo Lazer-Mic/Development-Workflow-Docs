@@ -33,6 +33,7 @@
 - [Homebrew](tools/homebrew/README.md)
 - [iTerm2](tools/iterm2/README.md)
 - [mdBook](tools/mdbook/README.md)
+- [Neovim](tools/nvim/README.md)
 - [Terminal](tools/terminal/README.md)
 - [VS Code](tools/vscode/README.md)
 

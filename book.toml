@@ -14,6 +14,20 @@ git-repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
 
+[output.html.print]
+enable = false
+
+[output.html.fold]
+enable = false
+level = 0
+
+[output.html.playground]
+editable = false
+copyable = false
+copy-js = false
+line-numbers = false
+runnable = false
+
 [output.html.search]
 enable = true
 limit-results = 30
@@ -25,3 +39,11 @@ boost-paragraph = 1
 expand = true
 heading-split-level = 3
 prebuild-index = true
+
+[output.html.git]
+repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
+repository-icon = "fa-github"
+edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
+
+additional-css = []
+additional-js = []
