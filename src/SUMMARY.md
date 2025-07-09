@@ -1,8 +1,8 @@
 # Development Workflow Documentation
 
-[Introduction](introduction.md)
+- [Introduction](introduction.md)
 
-- [Programming Languages]()
+- [Programming Languages](languages/README.md)
   - [HTML & CSS](languages/html-css/README.md)
   - [JavaScript](languages/javascript/README.md)
   - [Markdown](languages/markdown/README.md)
@@ -10,12 +10,12 @@
   - [Rust](languages/rust/README.md)
   - [YAML & TOML](languages/yaml-toml/README.md)
 
-- [Projects]()
+- [Projects](projects/README.md)
   - [Automation & Scripts](projects/automation/README.md)
   - [SL-Configurator Documentation](projects/sl-configurator/README.md)
   - [Project Templates](projects/templates/README.md)
 
-- [Systems]()
+- [Systems](systems/README.md)
   - [Git Version Control](systems/git/README.md)
   - [GitHub](systems/github/README.md)
   - [GitHub Actions](systems/github-actions/README.md)
@@ -23,7 +23,7 @@
   - [macOS Development](systems/macos/README.md)
   - [Shell & Zsh](systems/shell-zsh/README.md)
 
-- [Tools]()
+- [Tools](tools/README.md)
   - [Claude AI](tools/claude-ai/README.md)
   - [Cursor IDE](tools/cursor/README.md)
   - [Homebrew](tools/homebrew/README.md)
@@ -33,7 +33,7 @@
   - [Terminal](tools/terminal/README.md)
   - [VS Code](tools/vscode/README.md)
 
-- [Workflows]()
+- [Workflows](workflows/README.md)
   - [Deployment](workflows/deployment/README.md)
   - [Documentation](workflows/documentation/README.md)
   - [Learning Journey](workflows/learning-journey/README.md)
