@@ -16,7 +16,7 @@ edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit
 auto-hide-menu = false
 no-section-label = true
 fold.enable = true
-fold.level = 1
+fold.level = 0
 
 [output.html.print]
 enable = false
