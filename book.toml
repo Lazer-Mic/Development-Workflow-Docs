@@ -20,7 +20,7 @@ no-section-label = true
 enable = false
 
 [output.html.fold]
-enable = false
+enable = true
 level = 0
 
 [output.html.playground]
