@@ -14,6 +14,7 @@ git-repository-url = "https://github.com/Lazer-Mic/Development-Workflow-Docs"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/Lazer-Mic/Development-Workflow-Docs/edit/main/src/{path}"
 auto-hide-menu = false
+no-section-label = true
 
 [output.html.print]
 enable = false
